@@ -36,6 +36,11 @@ public class Shopowner : NPCBase, INPC
     }
     public void Speak()
     {
+        if (SpellCasted == true)
+        {
+            Debug.Log("Shopowner cannot speak rn...");
+            return;
+        }
         Debug.Log("Do you wish to purchase something?");
     }
 }
@@ -48,6 +53,11 @@ public class Farmer : NPCBase, INPC
     }
     public void Speak()
     {
+        if (SpellCasted == true)
+        {
+            Debug.Log("Farmer cannot speak rn...");
+            return;
+        }
         Debug.Log("You reap what you sow...");
     }
 }
